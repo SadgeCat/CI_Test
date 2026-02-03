@@ -1,3 +1,7 @@
+# Yuhang Pan
+# SoftDev 2026
+# Continuous Integration DEMO
+
 from app import app
 
 def test_page():
