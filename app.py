@@ -1,8 +1,6 @@
-# skibidireze67: Yuhang Pan, Matthew Ciu
-# SoftDev 2025
-# K29: A RESTful Journey Skyward
-# 2025-11-20
-# time spent: 1
+# Yuhang Pan
+# SoftDev 2026
+# Continuous Integration DEMO
 
 from flask import Flask, render_template
 import json
@@ -11,7 +9,8 @@ import urllib.parse
 
 app = Flask(__name__) 
 
-nasa_key = ymFsQ7dIjWYw0T64b8W4Lyb4IkWcvnc5hXH2IF6k
+with open("key_nasa.txt") as file:
+    nasa_key = file.read()
 
 with urllib.request.urlopen("https://api.nasa.gov/planetary/apod?api_key=" + nasa_key) as response:
     page = response.read()
@@ -25,12 +24,12 @@ imgurl = dict["hdurl"]
 
 @app.route('/')
 def gaming():
-    print("newguy") 
     print(dict)
-    print("/n gamergod") 
+    print("/n") 
     print(desc)
-    print("/n gamergod") 
+    print("/n") 
     print(imgurl)
     return render_template("main.html", desc=desc, imgurl=imgurl)
-app.run() 
 
+if __name__ == "__main__":
+    app.run()
