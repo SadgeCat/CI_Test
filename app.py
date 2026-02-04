@@ -9,9 +9,6 @@ import urllib.parse
 
 app = Flask(__name__)
 
-print('hi')
-useless_var = "uesless"
-
 @app.route('/')
 def gaming():
     with open("key_nasa.txt") as file:
