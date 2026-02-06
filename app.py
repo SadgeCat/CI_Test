@@ -7,9 +7,7 @@ import json
 import urllib.request
 import urllib.parse
 
-app = Flask(__name__) 
-
-useless_variable = "will this break?"
+app = Flask(__name__)
 
 @app.route('/home')
 def gaming():
@@ -23,13 +21,13 @@ def gaming():
     dict = json.loads(page.decode('utf-8'))
     # use json to convert page from bytes to a usable dict
     desc = dict['explanation']
-    # pulls explanation 
+    # pulls explanation
     imgurl = dict["hdurl"]
-    
+
     print(dict)
-    print("/n") 
+    print("/n")
     print(desc)
-    print("/n") 
+    print("/n")
     print(imgurl)
     return render_template("main.html", desc=desc, imgurl=imgurl)
 
