@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 useless_variable = "will this break?"
 
-@app.route('/')
+@app.route('/home')
 def gaming():
     with open("key_nasa.txt") as file:
         nasa_key = file.read()
