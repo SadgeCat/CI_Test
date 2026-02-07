@@ -9,7 +9,7 @@ import urllib.parse
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/67')
 def gaming():
     with open("key_nasa.txt") as file:
         nasa_key = file.read()
