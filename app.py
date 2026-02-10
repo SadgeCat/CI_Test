@@ -9,8 +9,7 @@ import urllib.parse
 
 app = Flask(__name__)
 
-# surelyy this breaks right?!?
-@app.route('/38148')
+@app.route('/')
 def gaming():
     with open("key_nasa.txt") as file:
         nasa_key = file.read()
